@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مدیر وام من</title>
+<style>
+:root{--site-primary:#183b36;--site-secondary:#dcebe4;--site-background:#f3f6f3;--site-on-primary:#fff;--site-on-secondary:#183b36;--site-on-background:#172c28;--site-font-body:Tahoma,Arial,sans-serif;--site-font-heading:Tahoma,Arial,sans-serif;--site-heading-scale:1;--site-spacing-scale:1;--site-radius-scale:1;--site-decoration-opacity:1;color-scheme:light dark}
+*{box-sizing:border-box}body{margin:0;font-family:var(--site-font-body);background:light-dark(#f3f6f3,#101815);color:light-dark(#172c28,#edf4ef)}button,input,select{font:inherit}button{cursor:pointer;border:0;border-radius:12px;padding:11px 15px;background:var(--site-primary);color:var(--site-on-primary)}.app{min-height:100vh;background:light-dark(#f3f6f3,#101815);padding:24px;max-width:1200px;margin:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:22px}.brand{display:flex;align-items:center;gap:12px}.logo{width:48px;height:48px;border-radius:15px;background:var(--site-primary);display:grid;place-items:center;color:white;font-size:24px}.muted{color:light-dark(#71817b,#a1b1aa);font-size:13px}.top h1{font-size:calc(24px * var(--site-heading-scale));margin:0 0 5px}.primary{background:var(--site-primary);color:white}.ghost{background:transparent;color:inherit;border:1px solid light-dark(#d7e1db,#33453d)}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:20px}.card{background:light-dark(#fff,#1a2520);border:1px solid light-dark(#e2e9e4,#2b3932);border-radius:calc(18px * var(--site-radius-scale));padding:18px;box-shadow:0 4px 16px #102b1b0a}.stat-label{font-size:13px;color:light-dark(#64756d,#a8b7af)}.stat{font-size:25px;font-weight:800;margin:12px 0 5px}.green{color:#2f8b63}.red{color:#c65b53}.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:26px 0 14px}.section-head h2{font-size:19px;margin:0}.loans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.loan-title{display:flex;justify-content:space-between;align-items:center}.badge{border-radius:20px;background:#fff0d9;color:#99671a;padding:5px 9px;font-size:12px}.loan-amount{font-size:24px;font-weight:800;margin:17px 0 5px}.details{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:17px;padding-top:14px;border-top:1px solid light-dark(#e5ebe6,#334139);font-size:13px}.details b{display:block;margin-top:5px;font-size:14px}.progress{height:7px;background:light-dark(#e9efea,#334139);border-radius:9px;overflow:hidden;margin-top:16px}.progress span{height:100%;display:block;background:#55a783;border-radius:9px}.lower{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;min-width:470px;font-size:13px}th,td{text-align:right;padding:13px 10px;border-bottom:1px solid light-dark(#e7ece8,#334139)}th{color:light-dark(#6b7b73,#a8b7af);font-weight:500}.status{color:#2f8b63;background:#e0f4e9;border-radius:16px;padding:5px 8px;white-space:nowrap}.receipt-drop{border:1.5px dashed light-dark(#b9cbc0,#53665b);border-radius:15px;padding:22px;text-align:center;margin-top:14px}.receipt-drop input{max-width:100%;margin-top:12px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field label{font-size:12px;color:light-dark(#687970,#aab8b0);display:block;margin-bottom:7px}.field input,.field select{width:100%;padding:11px;border:1px solid light-dark(#dce5de,#3a4b41);border-radius:10px;background:light-dark(#fff,#111a15);color:inherit}.full{grid-column:1/-1}.plan{background:var(--site-secondary);color:var(--site-on-secondary);border-radius:14px;padding:15px;margin-top:12px;font-size:13px;line-height:1.9}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.tabs button{background:transparent;color:inherit;border:1px solid light-dark(#d8e2db,#39483f)}.tabs button.active{background:var(--site-primary);color:white}.view{display:none}.view.active{display:block}.notice{font-size:12px;line-height:1.8;color:light-dark(#6b7b73,#a8b7af);margin-top:12px}.toast{position:fixed;bottom:20px;left:20px;background:#183b36;color:#fff;padding:12px 16px;border-radius:12px;display:none;box-shadow:0 8px 24px #0002}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.loans{grid-template-columns:1fr}.lower{grid-template-columns:1fr}.app{padding:16px}.stat{font-size:22px}}
+@media(max-width:420px){.grid{gap:9px}.card{padding:14px}.stat{font-size:19px}.form-grid{grid-template-columns:1fr}.full{grid-column:auto}.top h1{font-size:21px}}
+
+/* Visual refresh: premium indigo, teal and warm accent palette */
+:root {
+  --site-primary: #5146D8;
+  --site-secondary: #E9E8FF;
+  --site-background: #F4F5FB;
+  --site-on-primary: #FFFFFF;
+  --site-on-secondary: #302A78;
+  --site-on-background: #20223A;
+}
+body {
+  background: light-dark(#F4F5FB, #101225);
+  color: light-dark(#20223A, #F0F0FA);
+}
+.app {
+  max-width: 1320px;
+  padding: 28px clamp(14px, 3vw, 38px) 44px;
+  background:
+    radial-gradient(ellipse at 90% 0%, #DCD9FF80 0, transparent 34%),
+    radial-gradient(ellipse at 0% 25%, #CFF3E780 0, transparent 28%),
+    light-dark(#F4F5FB, #101225);
+}
+.top {
+  position: relative;
+  overflow: hidden;
+  padding: 25px 28px;
+  border-radius: 25px;
+  color: #fff;
+  background: linear-gradient(118deg, #29245F 0%, #5146D8 55%, #776CEB 100%);
+  box-shadow: 0 16px 36px #4038A52E;
+  margin-bottom: 20px;
+}
+.top::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border: 1px solid #FFFFFF25;
+  border-radius: 50%;
+  left: -55px;
+  top: -145px;
+  box-shadow: 0 0 0 28px #FFFFFF0B, 0 0 0 58px #FFFFFF08;
+  pointer-events: none;
+}
+.top .muted { color: #E2E0FF; }
+.top h1 { font-size: calc(27px * var(--site-heading-scale)); letter-spacing: -.5px; }
+.logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: #FFFFFF20;
+  border: 1px solid #FFFFFF35;
+  backdrop-filter: blur(8px);
+}
+.top > button {
+  background: #fff;
+  color: #4439C4;
+  font-weight: 800;
+  box-shadow: 0 7px 18px #17134C30;
+  position: relative;
+  z-index: 1;
+}
+.tabs {
+  background: light-dark(#FFFFFFC9, #1A1B32);
+  border: 1px solid light-dark(#E7E8F2, #30314D);
+  border-radius: 17px;
+  padding: 7px;
+  gap: 6px;
+  box-shadow: 0 6px 20px #29245F0A;
+}
+.tabs button {
+  border: 0;
+  border-radius: 12px;
+  padding: 11px 17px;
+  color: light-dark(#646681, #B8B8D0);
+  transition: .2s ease;
+}
+.tabs button:hover { background: light-dark(#F0EFFF, #292846); }
+.tabs button.active {
+  background: linear-gradient(120deg, #5146D8, #766BEA);
+  color: #fff;
+  box-shadow: 0 5px 13px #5146D83B;
+}
+.card {
+  border: 1px solid light-dark(#E8E9F3, #30314A);
+  border-radius: calc(21px * var(--site-radius-scale));
+  box-shadow: 0 8px 24px #29245F0A;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 13px 30px #29245F14;
+}
+.grid { gap: 16px; }
+.grid > .card { position: relative; overflow: hidden; padding: 21px; }
+.grid > .card::before {
+  content: "";
+  position: absolute;
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  left: -25px;
+  top: -30px;
+  background: var(--accent, #5146D8);
+  opacity: .09;
+}
+.grid > .card:nth-child(1) { --accent: #5146D8; border-top: 3px solid #655AE2; }
+.grid > .card:nth-child(2) { --accent: #E06B65; border-top: 3px solid #E06B65; }
+.grid > .card:nth-child(3) { --accent: #20A889; border-top: 3px solid #20A889; }
+.grid > .card:nth-child(4) { --accent: #E5A33B; border-top: 3px solid #E5A33B; }
+.stat { font-size: clamp(20px, 2vw, 27px); letter-spacing: -.5px; }
+.stat-label { font-weight: 700; }
+.section-head { margin-top: 30px; }
+.section-head h2 { font-size: 20px; font-weight: 800; }
+button {
+  border-radius: 12px;
+  transition: transform .15s ease, filter .15s ease, box-shadow .15s ease;
+}
+button:hover { filter: brightness(1.06); }
+button:active { transform: scale(.98); }
+button.primary, button:not(.ghost):not(.tabs button) {
+  box-shadow: 0 5px 13px #5146D822;
+}
+.ghost {
+  background: light-dark(#FFFFFF, #20213A);
+  border-color: light-dark(#E4E4F0, #393A58);
+  color: light-dark(#5146D8, #C9C5FF);
+}
+.loan-title strong { font-size: 16px; }
+.loan-amount { color: light-dark(#282650, #F0EEFF); }
+.badge { background: #FFF0E5; color: #B65B2A; font-weight: 700; }
+.status { background: #E1F6EF; color: #168366; font-weight: 700; }
+.progress { height: 9px; background: light-dark(#EEEFF7, #30314A); }
+.progress span { background: linear-gradient(90deg, #20A889, #69C9AE); }
+.details { border-color: light-dark(#ECECF4, #34354D); }
+table { border-collapse: separate; border-spacing: 0; }
+th { background: light-dark(#F8F8FC, #20213A); font-weight: 700; }
+th:first-child { border-radius: 0 10px 0 0; }
+th:last-child { border-radius: 10px 0 0 0; }
+td, th { padding: 15px 12px; }
+tr:last-child td { border-bottom: 0; }
+.field input, .field select {
+  min-height: 45px;
+  border-radius: 12px;
+  transition: border-color .2s, box-shadow .2s;
+}
+.field input:focus, .field select:focus {
+  outline: none;
+  border-color: #766BEA;
+  box-shadow: 0 0 0 3px #766BEA22;
+}
+.receipt-drop {
+  background: light-dark(#FAFAFF, #20213A);
+  border: 1.5px dashed #AAA5F0;
+  line-height: 1.9;
+}
+.plan {
+  background: linear-gradient(120deg, #E9E8FF, #E4F7F1);
+  border: 1px solid #D9D8FA;
+  border-radius: 17px;
+}
+.toast {
+  background: #29245F;
+  box-shadow: 0 12px 30px #17134C35;
+}
+@media (max-width: 650px) {
+  .top { padding: 20px 17px; border-radius: 20px; }
+  .top h1 { font-size: 22px; }
+  .tabs { display: grid; grid-template-columns: 1fr 1fr; }
+  .tabs button { padding: 10px 7px; font-size: 13px; }
+  .grid { gap: 10px; }
+  .grid > .card { padding: 15px 12px; }
+  .stat { font-size: 19px; }
+}
+
+</style>
+<meta name="theme-color" content="#5146D8">
+<meta name="description" content="مدیریت خصوصی اقساط وام و بایگانی رسیدها روی دستگاه">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body><main class="app">
+<header class="top"><div class="brand"><div class="logo">▤</div><div><h1>مدیریت وام‌ها</h1><div class="muted">مدیریت اقساط و بایگانی خصوصی رسیدها</div></div></div><button onclick="showView('payment')">＋ ثبت پرداخت جدید</button></header>
+<nav class="tabs"><button class="active" onclick="showView('dashboard',this)">داشبورد</button><button onclick="showView('payment',this)">ثبت پرداخت و رسید</button><button onclick="showView('loans',this)">وام‌های من</button><button onclick="showView('plan',this)">برنامه جبران بدهی</button></nav>
+<section id="dashboard" class="view active">
+<section class="card" style="margin:0 0 18px;padding:16px 18px">
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+    <div><strong>🔒 اطلاعات خصوصی روی همین دستگاه</strong><div class="muted" style="margin-top:5px">بدون حساب کاربری و بدون ذخیره‌سازی ابری</div></div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="ghost" type="button" onclick="exportBackup()">⬇ پشتیبان‌گیری</button>
+      <button class="ghost" type="button" onclick="$('restoreFile').click()">⬆ بازیابی پشتیبان</button>
+      <input id="restoreFile" type="file" accept="application/json,.json" hidden onchange="importBackup(event)">
+    </div>
+  </div>
+</section>
+
+<div class="grid"><div class="card"><div class="stat-label">مجموع اقساط ماهانه</div><div class="stat">۱۰,۰۰۰,۰۰۰</div><div class="muted">تومان · نمونه اولیه</div></div><div class="card"><div class="stat-label">عقب‌افتادگی کل</div><div class="stat red">۱۶,۰۰۰,۰۰۰</div><div class="muted">۲ قسط معوق</div></div><div class="card"><div class="stat-label">پرداخت‌های این ماه</div><div class="stat green">۷,۰۰۰,۰۰۰</div><div class="muted">از ۱۰ میلیون تومان</div></div><div class="card"><div class="stat-label">رسیدهای بایگانی‌شده</div><div class="stat">۱۲</div><div class="muted">نمونه اولیه</div></div></div>
+<div class="section-head"><h2>وضعیت وام‌ها</h2><button class="ghost" onclick="showView('loans')">مشاهده همه</button></div>
+<div class="loans"><article class="card"><div class="loan-title"><strong>وام بانک اول</strong><span class="badge">معوق</span></div><div class="loan-amount">۵,۰۰۰,۰۰۰ <small style="font-size:12px;font-weight:400">تومان / ماه</small></div><div class="muted">حساب مقصد: •••• ۴۲۱۰</div><div class="details"><div>عقب‌افتادگی<b class="red">۱۰,۰۰۰,۰۰۰ تومان</b></div><div>اقساط باقی‌مانده<b>۱۸ قسط</b></div></div><div class="progress"><span style="width:42%"></span></div><button style="width:100%;margin-top:15px" onclick="fillLoan('بانک اول',5000000,'•••• ۴۲۱۰')">ثبت پرداخت این وام</button></article>
+<article class="card"><div class="loan-title"><strong>وام بانک دوم</strong><span class="badge">معوق</span></div><div class="loan-amount">۳,۰۰۰,۰۰۰ <small style="font-size:12px;font-weight:400">تومان / ماه</small></div><div class="muted">حساب مقصد: •••• ۸۰۳۲</div><div class="details"><div>عقب‌افتادگی<b class="red">۶,۰۰۰,۰۰۰ تومان</b></div><div>اقساط باقی‌مانده<b>۲۴ قسط</b></div></div><div class="progress"><span style="width:25%"></span></div><button style="width:100%;margin-top:15px" onclick="fillLoan('بانک دوم',3000000,'•••• ۸۰۳۲')">ثبت پرداخت این وام</button></article>
+<article class="card"><div class="loan-title"><strong>وام بانک سوم</strong><span class="badge" style="background:#e0f4e9;color:#2f805d">به‌روز</span></div><div class="loan-amount">۲,۰۰۰,۰۰۰ <small style="font-size:12px;font-weight:400">تومان / ماه</small></div><div class="muted">حساب مقصد: •••• ۱۱۲۷</div><div class="details"><div>عقب‌افتادگی<b class="green">۰ تومان</b></div><div>اقساط باقی‌مانده<b>۹ قسط</b></div></div><div class="progress"><span style="width:72%"></span></div><button style="width:100%;margin-top:15px" onclick="fillLoan('بانک سوم',2000000,'•••• ۱۱۲۷')">ثبت پرداخت این وام</button></article></div>
+<div class="section-head"><h2>آخرین پرداخت‌ها</h2><button class="ghost" onclick="showView('payment')">＋ ثبت پرداخت</button></div><div class="card table-wrap"><table><thead><tr><th>وام</th><th>تاریخ</th><th>مبلغ</th><th>رسید</th><th>وضعیت</th></tr></thead><tbody id="recentRows"><tr><td>بانک اول</td><td>۱۴۰۵/۰۷/۲۵</td><td>۵,۰۰۰,۰۰۰</td><td>رسید ۱۲۳۴</td><td><span class="status">ثبت‌شده</span></td></tr><tr><td>بانک سوم</td><td>۱۴۰۵/۰۷/۲۰</td><td>۲,۰۰۰,۰۰۰</td><td>رسید ۸۸۲۱</td><td><span class="status">ثبت‌شده</span></td></tr></tbody></table></div>
+</section>
+<section id="payment" class="view"><div class="section-head"><h2>ثبت پرداخت و بایگانی رسید</h2><span class="muted">پرداخت واقعی خودت را ثبت کن</span></div><div class="card"><form id="payForm" class="form-grid"><div class="field"><label>وام / بانک</label><select id="bank"><option>بانک اول</option><option>بانک دوم</option><option>بانک سوم</option></select></div><div class="field"><label>مبلغ پرداختی (تومان)</label><input id="amount" type="number" min="1" placeholder="مثلاً ۵۰۰۰۰۰۰" required></div><div class="field"><label>تاریخ پرداخت</label><input id="date" type="date" required></div><div class="field"><label>شماره پیگیری</label><input id="tracking" placeholder="شماره پیگیری بانکی"></div><div class="field full"><label>حساب مقصد</label><input id="account" placeholder="شماره حساب یا شبا"></div><div class="field full"><label>توضیحات (اختیاری)</label><input id="notes" placeholder="مثلاً قسط مهر یا تسویه بخشی از معوقه"></div><div class="field full"><label>تصویر رسید پرداخت</label><div class="receipt-drop">📎<br><strong>تصویر رسید را انتخاب کن</strong><br><span class="muted">عکس رسید از گالری یا فایل‌ها</span><br><input id="receipt" type="file" accept="image/*,.pdf"></div><div id="fileName" class="muted"></div></div><div class="full"><button type="submit">ذخیره پرداخت و رسید</button></div></form><div class="notice">اطلاعات و رسیدها فقط روی همین دستگاه ذخیره می‌شوند و به فضای ابری ارسال نمی‌شوند. از بخش پشتیبان‌گیری، مرتباً فایل پشتیبان بگیر؛ پاک‌کردن داده‌های مرورگر ممکن است اطلاعات را حذف کند.</div></div><div class="section-head"><h2>بایگانی رسیدهای ثبت‌شده</h2></div><div class="card table-wrap"><table><thead><tr><th>بانک</th><th>تاریخ</th><th>مبلغ</th><th>پیگیری</th><th>فایل رسید</th></tr></thead><tbody id="receiptRows"><tr><td colspan="5" class="muted">هنوز پرداخت آزمایشی ثبت نشده است.</td></tr></tbody></table></div></section>
+<section id="loans" class="view"><div class="section-head"><h2>فهرست وام‌ها</h2><button onclick="alert('در نسخه بعدی فرم افزودن و ویرایش وام کامل می‌شود.')">＋ افزودن وام</button></div><div class="card table-wrap"><table><thead><tr><th>بانک</th><th>قسط ماهانه</th><th>حساب مقصد</th><th>عقب‌افتادگی</th><th>اقساط باقی‌مانده</th></tr></thead><tbody><tr><td>بانک اول</td><td>۵,۰۰۰,۰۰۰ تومان</td><td>•••• ۴۲۱۰</td><td class="red">۱۰,۰۰۰,۰۰۰</td><td>۱۸</td></tr><tr><td>بانک دوم</td><td>۳,۰۰۰,۰۰۰ تومان</td><td>•••• ۸۰۳۲</td><td class="red">۶,۰۰۰,۰۰۰</td><td>۲۴</td></tr><tr><td>بانک سوم</td><td>۲,۰۰۰,۰۰۰ تومان</td><td>•••• ۱۱۲۷</td><td class="green">۰</td><td>۹</td></tr></tbody></table></div><p class="notice">نام بانک‌ها، مبالغ و شماره‌حساب‌های اولیه صرفاً نمونه‌اند؛ پیش از استفاده، اطلاعات واقعی خودت را وارد کن.</p></section>
+<section id="plan" class="view"><div class="section-head"><h2>برنامه جبران عقب‌افتادگی</h2></div><div class="card"><div class="form-grid"><div class="field"><label>بودجه ماهانه برای تمام وام‌ها (تومان)</label><input id="budget" type="number" value="15000000" min="0" oninput="calcPlan()"></div><div class="field"><label>اقساط جاری ماهانه (تومان)</label><input id="current" type="number" value="10000000" min="0" oninput="calcPlan()"></div><div class="field"><label>کل عقب‌افتادگی (تومان)</label><input id="arrears" type="number" value="16000000" min="0" oninput="calcPlan()"></div></div><div class="plan" id="planOutput"></div><p class="notice">این محاسبه ساده است و جریمه دیرکرد، نرخ سود، سررسید حساس یا قوانین تسویه زودهنگام بانک‌ها را خودکار لحاظ نمی‌کند. قبل از جابه‌جایی اولویت پرداخت، شرایط واقعی هر وام را بررسی کن.</p></div></section>
+<div class="toast" id="toast"></div></main>
+
+<script>
+const $=id=>document.getElementById(id);
+let selectedFile=null;
+const DB_NAME='modir-vam-local', DB_VERSION=1;
+const money=n=>new Intl.NumberFormat('fa-IR').format(Number(n)||0)+' تومان';
+function openDB(){return new Promise((resolve,reject)=>{const r=indexedDB.open(DB_NAME,DB_VERSION);r.onupgradeneeded=()=>{const db=r.result;if(!db.objectStoreNames.contains('payments'))db.createObjectStore('payments',{keyPath:'id'});};r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error);});}
+async function allPayments(){const db=await openDB();return new Promise((resolve,reject)=>{const r=db.transaction('payments').objectStore('payments').getAll();r.onsuccess=()=>resolve(r.result.sort((a,b)=>b.createdAt-a.createdAt));r.onerror=()=>reject(r.error);});}
+async function savePayment(p){const db=await openDB();return new Promise((resolve,reject)=>{const tx=db.transaction('payments','readwrite');tx.objectStore('payments').put(p);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);});}
+function showView(id,btn){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===id));document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');else{const b=[...document.querySelectorAll('.tabs button')].find(b=>b.getAttribute('onclick')?.includes("'"+id+"'"));if(b)b.classList.add('active')}window.scrollTo({top:0,behavior:'smooth'});}
+function fillLoan(bank,amount,account){$('bank').value=bank;$('amount').value=amount;$('account').value=account;showView('payment');}
+$('receipt').addEventListener('change',e=>{selectedFile=e.target.files[0]||null;$('fileName').textContent=selectedFile?'فایل انتخاب‌شده: '+selectedFile.name:'';});
+function toast(msg){$('toast').textContent=msg;$('toast').style.display='block';setTimeout(()=>$('toast').style.display='none',3500);}
+function escapeHtml(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+$('payForm').addEventListener('submit',async e=>{
+ e.preventDefault();
+ try{
+  let fileData=null;
+  if(selectedFile){fileData={name:selectedFile.name,type:selectedFile.type||'application/octet-stream',blob:selectedFile};}
+  const p={id:crypto.randomUUID?crypto.randomUUID():String(Date.now()),bank:$('bank').value,amount:Number($('amount').value),date:$('date').value,tracking:$('tracking').value,account:$('account').value,notes:$('notes').value,file:fileData?.name||'بدون فایل',fileData,createdAt:Date.now()};
+  await savePayment(p); await refreshReceipts();
+  $('payForm').reset();selectedFile=null;$('fileName').textContent='';$('date').value=new Date().toISOString().slice(0,10);
+  toast('پرداخت و رسید روی همین دستگاه ذخیره شد.');
+ }catch(err){console.error(err);toast('ذخیره انجام نشد؛ فضای دستگاه را بررسی کن.');}
+});
+function fileLink(p){
+ if(!p.fileData?.blob)return escapeHtml(p.file||'بدون فایل');
+ const url=URL.createObjectURL(p.fileData.blob);
+ return `<a href="${url}" target="_blank" rel="noopener">مشاهده / دریافت رسید</a>`;
+}
+async function refreshReceipts(){
+ const list=await allPayments();
+ $('receiptRows').innerHTML=list.length?list.map(p=>`<tr><td>${escapeHtml(p.bank)}</td><td>${escapeHtml(p.date)}</td><td>${money(p.amount)}</td><td>${escapeHtml(p.tracking||'—')}</td><td>${fileLink(p)}</td></tr>`).join(''):'<tr><td colspan="5" class="muted">هنوز پرداختی ثبت نشده است.</td></tr>';
+ $('recentRows').innerHTML=list.slice(0,5).map(p=>`<tr><td>${escapeHtml(p.bank)}</td><td>${escapeHtml(p.date)}</td><td>${money(p.amount)}</td><td>${fileLink(p)}</td><td><span class="status">ثبت‌شده</span></td></tr>`).join('')||'<tr><td colspan="5" class="muted">هنوز پرداختی ثبت نشده است.</td></tr>';
+ const sum=list.reduce((a,p)=>a+p.amount,0);
+ const cards=document.querySelectorAll('#dashboard .grid .card');
+ if(cards[2]){cards[2].querySelector('.stat').textContent=money(sum);cards[2].querySelector('.muted').textContent='مجموع پرداخت‌های ثبت‌شده';}
+ if(cards[3]){cards[3].querySelector('.stat').textContent=new Intl.NumberFormat('fa-IR').format(list.filter(p=>p.fileData).length);cards[3].querySelector('.muted').textContent='رسیدهای ذخیره‌شده روی دستگاه';}
+}
+function calcPlan(){const budget=+$('budget').value||0,current=+$('current').value||0,arrears=+$('arrears').value||0,extra=Math.max(0,budget-current);$('planOutput').innerHTML=`بودجه ماهانه: <b>${money(budget)}</b><br>اقساط جاری: <b>${money(current)}</b><br>مبلغ قابل تخصیص به معوقه: <b>${money(extra)}</b><br>عقب‌افتادگی فعلی: <b>${money(arrears)}</b><br><strong>${extra>0?'زمان تقریبی جبران: '+(arrears===0?'نیازی به جبران نیست':Math.ceil(arrears/extra)+' ماه'):'با این بودجه، مبلغی برای جبران معوقه باقی نمی‌ماند.'}</strong>`;}
+async function exportBackup(){
+ const payments=await allPayments();
+ const payload={app:'modir-vam-local',version:1,exportedAt:new Date().toISOString(),payments};
+ const blob=new Blob([JSON.stringify(payload)],{type:'application/json'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='poshtiban-modir-vam-'+new Date().toISOString().slice(0,10)+'.json';a.click();URL.revokeObjectURL(a.href);
+ toast('فایل پشتیبان آماده شد؛ آن را در جای امن نگه دار.');
+}
+async function importBackup(event){
+ const f=event.target.files?.[0];if(!f)return;
+ try{
+  const payload=JSON.parse(await f.text());
+  if(payload.app!=='modir-vam-local'||!Array.isArray(payload.payments))throw new Error('invalid backup');
+  const db=await openDB();await new Promise((resolve,reject)=>{const tx=db.transaction('payments','readwrite');const store=tx.objectStore('payments');payload.payments.forEach(p=>store.put(p));tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);});
+  await refreshReceipts();toast('اطلاعات پشتیبان بازیابی شد.');
+ }catch(e){toast('فایل پشتیبان معتبر نیست.');}
+ event.target.value='';
+}
+const today=new Date();$('date').value=today.toISOString().slice(0,10);calcPlan();refreshReceipts();
+if('serviceWorker' in navigator && location.protocol!=='file:'){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(console.warn));}
+</script></body></html>

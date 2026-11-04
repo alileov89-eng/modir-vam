@@ -1,0 +1,12 @@
+{
+  "name": "مدیر وام من",
+  "short_name": "مدیر وام",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F4F5FB",
+  "theme_color": "#5146D8",
+  "description": "مدیریت خصوصی اقساط و بایگانی رسیدها"
+}
